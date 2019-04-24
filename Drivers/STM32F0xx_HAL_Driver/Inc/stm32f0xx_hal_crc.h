@@ -119,7 +119,7 @@ typedef struct
   */ 
 typedef struct
 {
-  CRC_TypeDef                 *Instance;   /*!< Register base address        */ 
+  CRC_TypeDef                 *Instance;   /*!< Register base address        */
   
   CRC_InitTypeDef             Init;        /*!< CRC configuration parameters */
   
@@ -127,14 +127,15 @@ typedef struct
     
   __IO HAL_CRC_StateTypeDef   State;       /*!< CRC communication state      */
   
-  uint32_t InputDataFormat;                /*!< This parameter is a value of @ref CRC_Input_Buffer_Format and specifies input data format. 
-                                            Can be either 
+  uint32_t InputDataFormat;                /*!< This parameter is a value of @ref CRC_Input_Buffer_Format and specifies input data format.
+                                            Can be either
                                             CRC_INPUTDATA_FORMAT_BYTES       input data is a stream of bytes (8-bit data)
                                             CRC_INPUTDATA_FORMAT_HALFWORDS   input data is a stream of half-words (16-bit data)
-                                            CRC_INPUTDATA_FORMAT_WORDS       input data is a stream of words (32-bits data)                                                                                        
+                                            CRC_INPUTDATA_FORMAT_WORDS       input data is a stream of words (32-bits data)
                                            Note that constant CRC_INPUT_FORMAT_UNDEFINED is defined but an initialization error
-                                           must occur if InputBufferFormat is not one of the three values listed above  */ 
+                                           must occur if InputBufferFormat is not one of the three values listed above  */
 }CRC_HandleTypeDef;
+
 /**
   * @}
   */

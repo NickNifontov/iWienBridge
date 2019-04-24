@@ -26,7 +26,6 @@
          (+) Use HAL_CRC_Calculate() function to compute the CRC value of the 
              input data buffer starting with the defined initialization value 
              (default or non-default) to initiate CRC calculation
-
   @endverbatim
   ******************************************************************************
   * @attention
@@ -273,7 +272,6 @@ __weak void HAL_CRC_MspDeInit(CRC_HandleTypeDef *hcrc)
           
       (+) compute the 7U, 8U, 16 or 32-bit CRC value of an 8U, 16 or 32-bit data buffer
           independently of the previous CRC value.
-
 @endverbatim
   * @{
   */
@@ -416,7 +414,6 @@ uint32_t HAL_CRC_Calculate(CRC_HandleTypeDef *hcrc, uint32_t pBuffer[], uint32_t
  ===============================================================================  
     [..]
     This subsection permits to get in run-time the status of the peripheral.
-
 @endverbatim
   * @{
   */
@@ -500,7 +497,7 @@ static uint32_t CRC_Handle_16(CRC_HandleTypeDef *hcrc, uint16_t pBuffer[], uint3
   uint32_t i = 0U;  /* input data buffer index */
   
   /* Processing time optimization: 2 HalfWords are entered in a row with a single word write,
-   * in case of odd length, last HalfWord must be carefully fed to the CRC calculator to ensure 
+   * in case of odd length, last HalfWord must be carefully fed to the CRC calculator to ensure
    * a correct type handling by the IP */
   for(i = 0U; i < (BufferLength/2U); i++)
   {
