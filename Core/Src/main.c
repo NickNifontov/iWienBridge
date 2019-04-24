@@ -106,6 +106,8 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
+	  // NOP
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
